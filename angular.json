@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SupportTicketsITILAngular": {
+    "presupuesto-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SupportTicketsITILAngular",
+            "outputPath": "dist/presupuesto-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,9 +23,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.slim.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -57,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "SupportTicketsITILAngular:build"
+            "browserTarget": "presupuesto-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "SupportTicketsITILAngular:build:production"
+              "browserTarget": "presupuesto-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SupportTicketsITILAngular:build"
+            "browserTarget": "presupuesto-app:build"
           }
         },
         "test": {
@@ -102,7 +107,7 @@
         }
       }
     },
-    "SupportTicketsITILAngular-e2e": {
+    "presupuesto-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "SupportTicketsITILAngular:serve"
+            "devServerTarget": "presupuesto-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "SupportTicketsITILAngular:serve:production"
+              "devServerTarget": "presupuesto-app:serve:production"
             }
           }
         },
@@ -131,5 +136,5 @@
       }
     }
   },
-  "defaultProject": "SupportTicketsITILAngular"
+  "defaultProject": "presupuesto-app"
 }
