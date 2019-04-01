@@ -7,6 +7,8 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { CabeceroComponent } from './cabecero/cabecero.component';
 import { TicketComponent } from './ticket/ticket.component';
 
+import { ScrollEventModule } from 'ngx-scroll-event';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { TicketComponent } from './ticket/ticket.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ScrollEventModule
   ],
   providers: [],
   bootstrap: [AppComponent]
